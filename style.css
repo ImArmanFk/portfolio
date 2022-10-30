@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -54,7 +58,7 @@ nav h2 {
     justify-content: center;
     align-items: center;
     margin: auto;
-    min-height: 85vh;
+    height: 100vh;
     max-width: 1000px;
 }
 
@@ -63,6 +67,7 @@ nav h2 {
     line-height: 1;
     margin-bottom: 8px;
     padding-left: 10px;
+    font-family: 'Playfair Display', serif;
 }
 
 .hero p {
@@ -83,20 +88,24 @@ button {
     width: 128px;
     padding: 8px 0px;
     background: rgb(92,95,124);
-    font-size: 14px;
+    font-size: 16px;
     color: rgb(178, 151, 88);
     cursor: pointer;
 }
 
 button:hover {
     background: rgb(64,68,114);
+    border-radius: 13px;
+    font-weight: 600;
+    font-size: 16px;
+    font-style: italic;
 }
+
 
 .Bild {
     width: 333px;
     margin: 0px 10px 0px 10px;
-
-    box-shadow: rgba(178,151,88) 10px 10px;
+    box-shadow: rgba(178,151,88) 5px 5px;
 }
 
 .intro-text {
@@ -113,7 +122,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 70px;
+    margin: 60px;
 }
 
 .work-title {
@@ -121,7 +130,8 @@ button:hover {
     font-size: 36px;
     line-height: 40px;
     font-weight: 700;
-    margin-bottom: 12px;
+    font-family: 'Playfair Display', serif;
+    margin-top: 40px;
 }
 
 .work-sub {
@@ -139,6 +149,7 @@ p {
 
 .chips-wrapper {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
     justify-content: center;
     margin: 8px 0px;
@@ -233,8 +244,12 @@ p.footer-license {
     line-height: 20px;
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 600px){
     .hero {
         flex-direction: column;
     }
+
+    .hero h1 {
+        margin-top: 10px;
+    } 
 }
